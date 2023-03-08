@@ -1,8 +1,8 @@
 """
     This code is the implementation of an agent-based system for design and generating fluid shapes
-    Fine tuned for a certain scale, the parameters can be changed to suit every other scalev and use-case
+    Fine tuned for a certain scale, the parameters can be changed to suit every other scale and use-case
     The agents need a curve (open or closed) as a guide
-    This code is meant to be copy pasted inside a ghPthon component.
+    This code is meant to be copy pasted inside a ghPthon component
     Inputs : 
             points : List of points representing the agents (point3d)
             time : Time period representing the number of iterations of the code (Integer)
@@ -26,7 +26,7 @@ from ghpythonlib.treehelpers import list_to_tree
 import random
 import math
 
-#Defining for the general Behavior of our Boids(agents)
+#Defining a class for the general Behavior of our Boids(agents)
 class Boids:
     
     #Initialize the class
@@ -124,7 +124,7 @@ class Boids:
                 self.vStab.append(Addition)
     
     
-    #Make the sum of all the behaviors of the agents and the determine the final behavior for every one of them
+    #Make the sum of all the behaviors of the agents and determine the final behavior for every one of them
     def Sum_behavior(self):
         for a, b, c in zip(self.vRep, self.vAtt, self.vStab):
             if a == 1 and b == 1 and c == 1:
